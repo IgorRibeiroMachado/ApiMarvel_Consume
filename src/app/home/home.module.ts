@@ -1,11 +1,9 @@
+import { SeriesIdModule } from './series-id/series-id.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
-import { CharactersComponent } from './characters/characters.component';
 import { CharactersModule } from './characters/characters.module';
-import { MaterialModule } from '../material/material.module';
 import { HomeRoutingModule } from './home-routing.module';
-import { SeriesComponent } from './series/series.component';
 import { SeriesModule } from './series/series.module';
 
 @NgModule({
@@ -14,7 +12,8 @@ import { SeriesModule } from './series/series.module';
     CommonModule,
     HomeRoutingModule,
     CharactersModule,
-    SeriesModule
+    SeriesModule,
+    SeriesIdModule,
   ],
   exports: [HomeComponent]
 })

@@ -1,0 +1,54 @@
+#seriesIdComponent {
+  form {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: #5C3D2E;
+
+    .formCharacterId {
+      border-radius: 4px;
+      padding: 6px 36px;
+      background-color: #E0C097;
+      color: #B85C38;
+    }
+  }
+
+  .serie-id-card-container {
+    background-color: #5C3D2E;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    li {
+      list-style: none;
+
+      .serie-id-card {
+        background-color: #E0C097;
+        margin-top: 40px;
+        width: 300px;
+        display: inline-block;
+
+        img {
+          border-radius: 4px;
+          height: 290px;
+          width: 290px;
+        }
+      }
+    }
+  }
+
+  .errorMessage {
+    color: black;
+    padding: 20px 40px;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-color: #E0C097;
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 40px;
+    text-align: center;
+  }
+}
+
