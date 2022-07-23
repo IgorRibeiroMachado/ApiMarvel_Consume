@@ -1,3 +1,29 @@
 <div id="charactersComponent">
-
+  <form (ngSubmit)="consultandoCharacter()">
+    <div class="formCharacterName">
+      <mat-form-field>
+        <mat-label>Character Name</mat-label>
+        <input matInput [formControl]="name">
+      </mat-form-field>
+      <button type="submit" mat-button>Search</button>
+    </div>
+  </form>
+    <mat-paginator class="paginator" showFirstLastButtons="true" (page)="onChangePage($event)" [length]="qntCharacters" [pageSize]="pageSize"></mat-paginator>
+  <div class="character-card-container" *ngIf="characters; else errorMessage">
+    <li *ngFor="let character of characters">
+      <mat-card class="character-card">
+        <mat-card-header>
+          <mat-card-title>{{ character.name }}</mat-card-title>
+          <mat-card-subtitle> ID: {{ character.id }} </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <img [src]="character.thumbnail.path + '.' + character.thumbnail.extension">
+          <p>Description: {{ character.description }} </p>
+        </mat-card-content>
+      </mat-card>
+    </li>
+  </div>
+  <ng-template #errorMessage>
+    <p class="errorMessage">No character yet</p>
+  </ng-template>
 </div>

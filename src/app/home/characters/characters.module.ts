@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CharactersComponent } from './characters.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from 'src/app/material/material.module';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [CharactersComponent],
@@ -11,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    MatPaginatorModule,
+    MaterialModule
   ],
   exports: [CharactersComponent]
 })
