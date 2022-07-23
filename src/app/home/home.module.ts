@@ -4,12 +4,14 @@ import { HomeComponent } from './home.component';
 import { CharactersComponent } from './characters/characters.component';
 import { CharactersModule } from './characters/characters.module';
 import { MaterialModule } from '../material/material.module';
+import { HomeRoutingModule } from './home-routing.module';
 
 @NgModule({
   declarations: [HomeComponent],
   imports: [
     CommonModule,
-    CharactersModule
+    HomeRoutingModule,
+    CharactersModule,
   ],
   exports: [HomeComponent]
 })

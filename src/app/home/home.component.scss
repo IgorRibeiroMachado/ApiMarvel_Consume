@@ -1,0 +1,29 @@
+#homeComponent {
+  h1 {
+    text-align: center;
+    padding: 40px;
+    padding-bottom: 80px;
+    margin-bottom: 0;
+    font-size: 38px;
+    background-color:#2D2424;
+    color: #B85C38;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      background-color: #5C3D2E;
+      padding: 20px;
+      li {
+        list-style: none;
+        a {
+          border-bottom: solid 1px #E0C097;
+          text-decoration: none;
+          color: #E0C097;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
