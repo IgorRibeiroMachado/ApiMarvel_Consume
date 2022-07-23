@@ -1,0 +1,29 @@
+<div id="seriesComponent">
+  <form (ngSubmit)="consultandoSeries()">
+    <div class="formCharacterTitle">
+      <mat-form-field>
+          <mat-label>Series Title</mat-label>
+          <input matInput [formControl]="title">
+        </mat-form-field>
+        <button type="submit" mat-button>Search</button>
+    </div>
+  </form>
+  <mat-paginator class="paginator" showFirstLastButtons="true" (page)="onChangePage($event)" [length]="qntSeries" [pageSize]="pageSize"></mat-paginator>
+  <div class="serie-card-container" *ngIf="series; else errorMessage">
+    <li *ngFor="let serie of series">
+      <mat-card class="serie-card">
+        <mat-card-header>
+          <mat-card-title>{{ serie.title }}</mat-card-title>
+          <mat-card-subtitle> ID: {{ serie.id }} </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <img [src]="serie.thumbnail.path + '.' + serie.thumbnail.extension">
+          <p> {{ serie.description }} </p>
+        </mat-card-content>
+      </mat-card>
+    </li>
+  </div>
+  <ng-template #errorMessage class="errorMessage">
+    <p class="errorMessage">No series yet</p>
+  </ng-template>
+</div>

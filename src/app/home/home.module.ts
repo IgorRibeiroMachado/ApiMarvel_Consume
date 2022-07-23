@@ -5,6 +5,8 @@ import { CharactersComponent } from './characters/characters.component';
 import { CharactersModule } from './characters/characters.module';
 import { MaterialModule } from '../material/material.module';
 import { HomeRoutingModule } from './home-routing.module';
+import { SeriesComponent } from './series/series.component';
+import { SeriesModule } from './series/series.module';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -12,6 +14,7 @@ import { HomeRoutingModule } from './home-routing.module';
     CommonModule,
     HomeRoutingModule,
     CharactersModule,
+    SeriesModule
   ],
   exports: [HomeComponent]
 })
