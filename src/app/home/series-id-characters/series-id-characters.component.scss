@@ -1,11 +1,11 @@
-#seriesComponent {
+#seriesIdCharactersComponent {
   form {
     display: flex;
     justify-content: center;
     padding: 30px;
     background-color: #5C3D2E;
 
-    .formCharacterTitle {
+    .formCharacterIdName {
       border-radius: 4px;
       padding: 6px 36px;
       background-color: #E0C097;
@@ -13,12 +13,7 @@
     }
   }
 
-  .paginator {
-    background-color: #E0C097;
-    color: #5C3D2E;
-  }
-
-  .serie-card-container {
+  .serie-id-character-card-container {
     background-color: #5C3D2E;
     padding: 20px;
     display: flex;
@@ -28,7 +23,7 @@
     li {
       list-style: none;
 
-      .serie-card {
+      .serie-id-character-card {
         background-color: #E0C097;
         margin-top: 40px;
         width: 300px;
