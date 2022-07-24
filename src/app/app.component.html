@@ -1,1 +1,19 @@
-<app-home></app-home>
+<header>
+  <h1>Marvel API</h1>
+  <div *ngIf="!autenticado; else logado">
+    <img (click)="login('google')" src="https://cdn-icons-png.flaticon.com/512/1000/1000777.png">
+    <img (click)="login('facebook')" src="https://cdn-icons.flaticon.com/png/512/3938/premium/3938034.png?token=exp=1658681986~hmac=c12a43d58944da5d93938ee31ba46db7">
+  </div>
+</header>
+
+<router-outlet></router-outlet>
+
+<ng-template #logado>
+  <div id="logado">
+    <p>{{ user.email }}</p>
+    <img [src]="user.photoURL">
+    <button (click)="deslogar()">Sign up</button>
+  </div>
+</ng-template>
+
+
